@@ -1,0 +1,15 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #050a14;
+  color: #fff;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 430px;
+}
