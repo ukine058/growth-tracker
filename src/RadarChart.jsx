@@ -13,7 +13,7 @@ export default function RadarChart({ levelPoints }) {
     return [cx + radius * ratio * Math.cos(angle), cy + radius * ratio * Math.sin(angle)]
   }
 
-  const maxPts = Math.max(...ATTRS.map(a => levelPoints[a.key]), 1)
+  const maxPts = Math.max(...ATTRS.map(a => levelPoints[a.key]), 5)
   const webLevels = [0.25, 0.5, 0.75, 1.0]
   const dataPoints = ATTRS.map((a, i) => getPoint(i, Math.min(levelPoints[a.key] / maxPts, 1), r))
   const labelPoints = ATTRS.map((a, i) => getPoint(i, 1.38, r))
