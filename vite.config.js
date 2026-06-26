@@ -3,5 +3,14 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/growth-tracker/',   // リポジトリ名 + / を必ず入れる
+  base: '/growth-tracker/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  }
 })
